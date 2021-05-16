@@ -1,0 +1,9 @@
+To Do 
+
+1. Add new User to database from admin
+2. Create Login
+3. Create Roles 
+4. Create Permission
+5. Create Courses
+6. Create Timetable
+7. Check Attendance 
