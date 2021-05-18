@@ -1,6 +1,6 @@
 */ File Structure */
 
- --- /resources/routes/ ---
+ --- /resources/views/ ---
 
 /admin/create_user.blade.php
 
@@ -15,6 +15,7 @@
 /student/student_detail.blade.php
 
 /student/student_lists.blade.php
+@foreea
 
 /shared/timetable_lists.blade.php
 
