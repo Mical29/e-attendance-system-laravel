@@ -8,6 +8,8 @@
 
 /admin/create_permission.blade.php
 
+/admin/create_class.blade.php
+
 /admin/create_course.blade.php
 
 /admin/create_timetable.blade.php

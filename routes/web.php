@@ -20,6 +20,7 @@ Route::get('/', function () {
 });
 
 Route::resource('users',UserController::class);
+Route::resource('class',ClassController::class);
 
 Auth::routes();
 
