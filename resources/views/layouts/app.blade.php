@@ -25,6 +25,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/loginstyle.css') }}" rel="stylesheet">
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>

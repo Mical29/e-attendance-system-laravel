@@ -2,22 +2,21 @@
 
  --- /resources/views/ ---
 
-/admin/create_user.blade.php
+/admin/create_user.blade.php <-- We are Here (Bob)
 
 /admin/create_role.blade.php
 
 /admin/create_permission.blade.php
 
-/admin/create_class.blade.php
+/admin/create_class.blade.php <-- We are Here (Bob)
 
-/admin/create_course.blade.php
+/admin/create_course.blade.php <-- We are Here (Martin)
 
-/admin/create_timetable.blade.php
+/admin/create_timetable.blade.php 
 
 /student/student_detail.blade.php
 
 /student/student_lists.blade.php
-@foreea
 
 /shared/timetable_lists.blade.php
 
@@ -35,11 +34,13 @@
 
 get: / -> home page
 
-post: /uer/ -> add user
-get: /user/id -> user(student,teacher,admin,staff) detail
+get: /users/id -> user(student,teacher,admin,staff) detail
+get: /users/create/ --> get form
+post: /users/create/ --> save in database 
 
-get: /courses/ -> display course_lists
-post: /courses/ -> save course
+get: /course/id -> course detail with id
+get: /course/create/ -> get form
+post: /course/create/ -> save course in database
 
 get: /courses/id -> display course_detail 
 

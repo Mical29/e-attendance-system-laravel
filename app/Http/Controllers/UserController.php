@@ -29,4 +29,8 @@ class UserController extends Controller
         $input['password'] = Hash::make($input['password']);
         $user = User::create($input);
     }
+
+    public function destroy(){
+        
+    }
 }
