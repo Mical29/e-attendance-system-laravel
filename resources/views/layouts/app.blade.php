@@ -22,6 +22,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -29,6 +30,10 @@
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <!-- Libraries --->
+    <script src="https://cdn.tiny.cloud/1/d04rsgjjmjdo88u23y4pa6stswctryfn0l66ir54xa3ola2s/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+  </script>
 </head>
 
     <div id="app">
@@ -86,11 +91,33 @@
             </div>
         </nav>
     </div>
-    <body class="container-fluid">
-        @yield('content')
+
+
+    <div class="container-fluid">
+    <div class="row mt-4">
+    <div class="col-md-3">
+    @include('layouts.sidebar')
+    </div>
+    <div class="col-md-9">
+    @yield('content')
+    </div>
+    </div>
+    
+            
 
     <!-- Scripts -->
+    
+    <script type="text/javascript" src="{{ URL::asset('js/bob.js') }}"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script>
+      tinymce.init({
+        selector: '#classRequirement',
+        tinycomments_author: 'Author name',
+    });
+    </script>
+
+    </script>
     </body>
 </html>
