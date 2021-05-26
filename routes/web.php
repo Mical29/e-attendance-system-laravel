@@ -24,6 +24,7 @@ Route::get('/', function () {
 Route::resource('users',UserController::class);
 Route::resource('class',ClassController::class);
 Route::resource('course',CourseController::class);
+Route::resource('roles',CourseController::class);
 
 Auth::routes();
 
