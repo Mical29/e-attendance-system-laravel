@@ -59,3 +59,11 @@ post: /course/create/ -> save course in database
 get: /courses/id -> display course_detail 
 
 
+-- Message -- 
+
+composer require spatie/laravel-permission
+php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+php artisan migrate
+
+--------------
+
