@@ -6,39 +6,31 @@ Head - Body are under layouts/app
 -->
 <div class="row mb-4">
 <div class="col-md-8">
-<h3>Add Class</h3>
+<h3>Add Program</h3>
 <section class="submitbox border border-gray rounded pl-3 pr-3 pb-3">
 <div class="operations">
         <div class="operations__tab-container">
           <button class="btn operations__tab operations__tab--1 operations__tab--active" data-tab="1">
-            <span>Class Details</span>
+            <span>Program Details</span>
           </button>
           <button class="btn operations__tab operations__tab--2" data-tab="2">
-            <span>Timeline</span>
+            <span>Fees</span>
           </button>
           <button class="btn operations__tab operations__tab--3" data-tab="3">
-            <span>Fees</span> 
-          </button>
-          <button class="btn operations__tab operations__tab--4" data-tab="4">
             <span>Eligibility & Requirements</span> 
           </button>
         </div>
-        <form id="regForm" action="">
+        <form id="programRegForm" action="">
                 <!-- One "operations__content" for each step in the form: -->
                 <div class="operations__content operations__content--1 operations__content--active">
                 <p>
-                    <label for="classname" class="text-muted">Class Name</label><br/>
-                    <input placeholder="E.g Diploma in IT..." name="classname" class="rounded">
+                    <label for="programname" class="text-muted">Program Name</label><br/>
+                    <input placeholder="E.g Diploma in IT..." name="programname" class="rounded">
                 </p>     
                 <p>
-                    <label for="batchid" class="text-muted">Batch ID</label>
-                    <br />
-                    <input placeholder="E.g. Batch 27..." name="batchid" class="rounded">
-                </p>
-                <p>
-                <label for="classcategory" class="text-muted">Category</label>
+                <label for="programcategory" class="text-muted">Category</label>
                 <br />
-                <select class="form-control" name="classcategory" id="classcategory">
+                <select class="form-control" name="programcategory" id="programcategory">
                 <option selected="" disabled="">Select a Category</option>
                 <optgroup label="Information Technology Categories">
                     <option value="iot">Internet of Things</option>
@@ -53,44 +45,30 @@ Head - Body are under layouts/app
                 </select>
                 </p>
                 <p>
-                    <label for="classmessage" class="text-muted">Message</label> <br />
-                    <textarea id="classmessage" name="classmessage" rows="4" placeholder="Lorem ipsum dolor sit amet..." class="rounded"></textarea>
+                    <label for="programimg" class="text-muted">Program Image</label> <br />
+                    <img id="programpreview" src="http://cdown.edu.jm/eLibrary_Jamaica_2019//wikipedia-schools-3.0.1/images/3223/322344.jpg" alt="program image" /> <br />
+                    <input accept="image/*" type='file' id="programimg" name="programimg" class="pt-3" />
                 </p>
                 
                 </div>
 
                 <div class="operations__content operations__content--2">
                 <p>
-                <label for="classstartsdate" class="text-muted">Start Date</label> <br />
-                <input type="date" name="classstartsdate" id="classstartsdate" class="rounded">
+                <label for="programfeeslocal" class="text-muted">For Domestic/Old Student</label> <br />
+                <input type="number" name="programfeeslocal" id="programfeeslocal" class="rounded">
                 </p>
                 <p>
-                <label for="timefrom" class="text-muted">From</label> <br />
-                <input type="time" name="timefrom" id="timefrom" class="rounded">
+                <label for="programfeesforeign" class="text-muted">For International/New Student</label> <br />
+                <input type="number" name="programfeesforeign" id="programfeesforeign" class="rounded">
                 </p>
-                <p>
-                <label for="timeto" class="text-muted">To</label> <br />
-                <input type="time" name="timeto" id="timeto" class="rounded">
-                </p>
+                <label for="programfeesmessage" class="text-muted">Program Fees Message</label> <br />
+                <textarea id="programfeesmessage" name="programfeesmessage" rows="4" placeholder="Message for the program fees " class="rounded">*Fees apply to all Myanmar residents (Myanmar Citizens, Permanent Residents and all pass holders excluding those holding a Student Pass)</textarea>
                 </div>
                 
                 <div class="operations__content operations__content--3">
-                <p>
-                <label for="classfeeslocal" class="text-muted">For Domestic/Old Student</label> <br />
-                <input type="number" name="classfeeslocal" id="classfeeslocal" class="rounded">
-                </p>
-                <p>
-                <label for="classfeesforeign" class="text-muted">For International/New Student</label> <br />
-                <input type="number" name="classfeesforeign" id="classfeesforeign" class="rounded">
-                </p>
-                <label for="classfeesmessage" class="text-muted">Class Fees Message</label> <br />
-                <textarea id="classfeesmessage" name="classfeesmessage" rows="4" placeholder="Message for the class fees " class="rounded">*Fees apply to all Myanmar residents (Myanmar Citizens, Permanent Residents and all pass holders excluding those holding a Student Pass)</textarea>
-                </div>
-
-                <div class="operations__content operations__content--4">
                 <p class="text-danger">
-                    <label for="classRequirement" class="text-muted">Please Describe Requirements of a Student.</label> <br />
-                <textarea id="classRequirement">Hello, World!</textarea>
+                    <label for="programRequirement" class="text-muted">Please Describe Requirements of a Student.</label> <br />
+                <textarea id="programRequirement">Hello, World!</textarea>
                 </p>
 
                 <div style="overflow:auto;">
@@ -107,10 +85,10 @@ Head - Body are under layouts/app
 </div>
 
 <div class="col-md-4">
-<h3>Existing Classes</h3>
+<h3>Existing Programs</h3>
 <section class="existingclasslist border border-gray rounded pl-3 pr-3 pb-3">
 
-<p class="message mb-3 mt-2 text-muted">The list is showing 2 of the last created class.</p>
+<p class="message mb-3 mt-2 text-muted">The list is showing 2 of the last created programs.</p>
 
 <div class="card mt-3">
 <img class="card-img-top" src="https://cdn.pixabay.com/photo/2012/08/27/14/19/mountains-55067__340.png" height="120px" alt="Card image cap">
@@ -131,16 +109,6 @@ Head - Body are under layouts/app
 </div>
 
 <section/>
-</div>
-</div>
-
-<div class="row">
-<div class="col-md-12">
-<h3>Add Instructor for the Class</h3>
-<section class="instructorlist border border-gray rounded pl-3 pr-3 pb-3">
-<div class="jumbotron jumbotron-fluid">
-<section/>
-</div>
 </div>
 </div>
 
