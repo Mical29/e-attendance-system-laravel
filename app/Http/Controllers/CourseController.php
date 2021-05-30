@@ -12,10 +12,12 @@ class CourseController extends Controller
     }
 
     public function create(){
+
         return view('admin/create_course');
     }
 
-    public function store(){
+    public function store(Request $request){
+        
 
     }
 
