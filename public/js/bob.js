@@ -28,6 +28,14 @@ tabsContainer.addEventListener('click', e => {
         .classList.add('operations__content--active');
 });
 
+//Program Image
+programimg.onchange = evt => {
+    const [file] = programimg.files;
+    if (file) {
+        programpreview.src = URL.createObjectURL(file);
+    }
+};
+
 //Time Validate
 const timefromto = function () {
     let timefrom = new Date();
