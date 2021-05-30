@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,9 @@ Route::get('/', function () {
 });
 
 Route::resource('users',UserController::class);
-Route::resource('class',ClassController::class);
+Route::resource('programs',ClassController::class);
 Route::resource('course',CourseController::class);
-Route::resource('roles',CourseController::class);
+Route::resource('roles',RoleController::class);
 
 Auth::routes();
 
