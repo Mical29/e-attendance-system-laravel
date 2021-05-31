@@ -23,6 +23,8 @@
 /admin/create_permission.blade.php
 
 /admin/create_class.blade.php <-- We are Here (Bob)
+--- please add "  name="programRequirement" to TINY text area "
+
 <form action = {{ route('programs.store') }} method= POST> </form>
 
 
