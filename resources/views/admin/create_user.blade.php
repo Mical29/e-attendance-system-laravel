@@ -24,6 +24,10 @@
                                     <option value="smsstudent">Student</option>
                                 </select>
                             </p>
+                            <p>
+                                <label for="joineddate" class="fs-5 fw-bold">Joined Date</label> <br />
+                                <input type="date" name="joineddate" id="joineddate">
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -59,24 +63,24 @@
                                         <p>
                                             <input placeholder="Last Name" name="profilelastname " class="rounded">
                                         </p>
-
-                                        {{-- <p>
-                                            <textarea id="profiledescription" name="profiledescription" rows="4" placeholder="Description " class="rounded"></textarea>
-                                        </p> --}}
                                         <p>
-                                            <label for="usergender" class="text-muted fw-bolder">Gender</label> <br />
+                                            <label for="usergender" class="text-muted">Gender</label> <br />
                                             <input type="radio" class="allergic" name="usergender" checked="checked" value="ugm" />
                                             <label for="pcyes" class="pr-2">Male</label>
                                             <input type="radio" class="allergic" name="usergender" value="ugf" />
                                             <label for="pcno">Female</label>
                                         </p>
-                                        {{-- <p>
-                                            <input placeholder="Headline" name="headline " class="rounded">
-                                        </p> --}}
                                         <p>
                                             <label for="dob" class="text-muted">Date of Birth</label> <br />
                                             <input type="date" name="dob" id="dob">
                                         </p>
+
+                                        {{-- <p>
+                                            <textarea id="profiledescription" name="profiledescription" rows="4" placeholder="Description " class="rounded"></textarea>
+                                        </p> --}}
+
+
+
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -89,12 +93,31 @@
                                             <input type="number" name="profilephone" id="profilephone" placeholder="Phone">
                                         </p>
                                         <p>
-                                            <label for="dob" class="text-muted">Date of Birth</label> <br />
-                                            <input type="date" name="dob" id="dob">
+                                            <select class="" name="userregion" id="userregion">
+                                                <option selected="" disabled="">Select Region</option>
+                                                <option value="ayy">Ayeyarwady</option>
+                                                <option value="bgo">Bago</option>
+                                                <option value="chn">Chin</option>
+                                                <option value="kcn">Kachin</option>
+                                                <option value="kyh">Kayah</option>
+                                                <option value="kyn">Kayin</option>
+                                                <option value="mdy">Mandalay</option>
+                                                <option value="mgy">Magway</option>
+                                                <option value="mon">Mon</option>
+                                                <option value="rke">Rakhine</option>
+                                                <option value="sgg">Sagaing</option>
+                                                <option value="shn">Shan</option>
+                                                <option value="tni">Tanintharyi</option>
+                                                <option value="ygn">Yangon</option>
+                                            </select>
                                         </p>
                                         <p>
-                                            <textarea id="profileaddress" name="profileaddress" rows="4" placeholder="Address" class="rounded"></textarea>
+                                            <input placeholder="Postal Code" name="postcode" class="rounded">
                                         </p>
+                                        <p>
+                                            <textarea id="profileaddress" name="profileaddress" rows="4" placeholder="Address Detail" class="rounded"></textarea>
+                                        </p>
+
                                     </div>
                                 </div>
                                 <div class="col-md-4">
