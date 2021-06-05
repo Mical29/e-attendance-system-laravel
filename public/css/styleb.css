@@ -1,3 +1,7 @@
+:root {
+    --blue: #18a0fb;
+}
+
 .operations__tab-container > .btn:focus {
     outline: 0 !important;
     box-shadow: none !important;
@@ -42,7 +46,9 @@
     font-size: 17px;
     border: 1px solid #aaaaaa;
 }
-
+input#programimg {
+    width: 300px;
+}
 /* Mark input boxes that gets an error on validation: */
 .operations input.invalid {
     background-color: #ffdddd;
@@ -71,4 +77,43 @@ button:hover {
     max-width: 300px;
     max-height: 300px;
     object-fit: contain;
+}
+
+/* for Users / Create */
+.userscreate select,
+.userscreate input:not([type="file"]):not([type="radio"]),
+.userscreate textarea {
+    width: 300px;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #aaaaaa;
+}
+.userscreate input.form-control {
+    width: 300px;
+}
+.userscreate input:focus-visible,
+.userscreate textarea:focus-visible {
+    outline-color: #4086f0;
+}
+#profilepreview,
+#guardianfirstpreview,
+#guardiansecpreview {
+    max-width: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    object-fit: contain;
+}
+.profile_same_height {
+    min-height: 35rem;
+}
+.toggle.ios,
+.toggle-on.ios,
+.toggle-off.ios {
+    border-radius: 20px;
+}
+.toggle.ios .toggle-handle {
+    border-radius: 20px;
 }

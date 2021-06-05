@@ -1,6 +1,5 @@
 'use strict';
 //for class/create
-
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsConent = document.querySelectorAll('.operations__content');
@@ -35,21 +34,3 @@ programimg.onchange = evt => {
         programpreview.src = URL.createObjectURL(file);
     }
 };
-
-//Time Validate
-const timefromto = function () {
-    let timefrom = new Date();
-    temp = $('#timefrom').val().split(':');
-    timefrom.setHours((parseInt(temp[0]) - 1 + 24) % 24);
-    timefrom.setMinutes(parseInt(temp[1]));
-
-    let timeto = new Date();
-    temp = $('#timeto').val().split(':');
-    timeto.setHours((parseInt(temp[0]) - 1 + 24) % 24);
-    timeto.setMinutes(parseInt(temp[1]));
-
-    if (timeto < timefrom) {
-        alert('start time should be smaller than end time!');
-    }
-};
-timefromto();
