@@ -10,12 +10,14 @@ class RoleController extends Controller
 {
     //
     public function index(){
-
+        $roles = Role::all();
+        $context = ['roles' => $roles]
+        return view('admin.role_list',$context);
     }
 
     public function create(){
         $permission = Permission::get();
-        return view('admin.create_role',compate('permission'));
+        return view('admin.create_role',compact('permission'));
 
     }
 

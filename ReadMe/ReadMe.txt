@@ -2,38 +2,11 @@
 
  --- /resources/views/ ---
 
-/admin/create_user.blade.php <-- We are Here (Bob)
-
-/admin/user_index.blade.php 
-@foreach($data as $key => $user)
-{{ $user->name }}
-{{ $user->email }}
-    @if(!empty($user->getRoleNames()))
-        @foreach($user->getRoleNames() as $role)
-        {{$role}}
-        @endforeach
-    @endif
-@endforeach
-
-/admin/create_role.blade.php
-@foreach($permission as $ value)
-{{$value -> name}}
-@endforeach
-
 /admin/create_permission.blade.php
-
-/admin/create_class.blade.php <-- We are Here (Bob)
---- please add "  name="programRequirement" to TINY text area "
-
-<form action = {{ route('programs.store') }} method= POST> </form>
-
-
 
 /admin/create_course.blade.php <-- We are Here (Martin)
 
 /admin/create_timetable.blade.php 
-
-
 
 /student/student_detail.blade.php
 
@@ -42,21 +15,6 @@
 /shared/timetable_lists.blade.php
 
 /shared/timetable_detail.blade.php
-
-/shared/program_index.blade.php
-
-    @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
-
-     @foreach($programs as $program)
-                 <p> {{$program->program_name }} </p>
-    @endforeach
-
-
-
 
 /shared/course_detail.blade.php
 

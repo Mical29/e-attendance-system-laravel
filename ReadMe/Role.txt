@@ -1,0 +1,24 @@
+---------------------------------------------------------------------------------
+
+/admin/create_role.blade.php
+
+    **** Display Form  ****
+
+    <form action = {{ route('roles.store') }} method= POST enctype="multipart/form-data"> </form>
+
+    @foreach($permission as $ value)
+        {{$value -> name}}
+    @endforeach
+
+--------------------------------------------------------------------------------
+
+/admin/role_list.blade.php
+
+    *** Display All Roles ***
+
+    @foreach($roles as $ role)
+            {{$role -> name}}
+    @endforeach
+
+-----------------------------------------------------------------------------------
+

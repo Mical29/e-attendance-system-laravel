@@ -1,0 +1,22 @@
+-----------------------------------------------------------------------------------------------
+
+/admin/create_class.blade.php <-- We are Here (Bob)
+--- please add "  name="programRequirement" to TINY text area "
+
+<form action = {{ route('programs.store') }} method= POST> </form>
+
+-----------------------------------------------------------------------------------------------
+
+/shared/program_index.blade.php
+
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
+
+     @foreach($programs as $program)
+                 <p> {{$program->program_name }} </p>
+    @endforeach
+
+-------------------------------------------------------------------------------------------------
