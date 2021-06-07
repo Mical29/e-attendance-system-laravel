@@ -1,18 +1,108 @@
 'use strict';
 //Choose Batch in Users/Create
 document.getElementById('userrole').onchange = function () {
-    document.getElementById('batchlist').setAttribute('disabled', 'disabled');
+    // document.getElementById('batchlist').setAttribute('disabled', 'disabled');
+    // document.getElementById('programlist').setAttribute('disabled', 'disabled');
+
+    const batchprogram = document.querySelectorAll('.bplist');
+    for (const element of batchprogram) {
+        element.setAttribute('disabled', 'disabled');
+    }
+
+    const lighton = document.querySelectorAll('.lighton');
+    for (const element of lighton) {
+        element.classList.add('text-light');
+    }
+
+    const addbutton = document.querySelector('.addpb');
+    addbutton.disabled = true;
+
+    const removebutton = document.querySelector('.removepb');
+    removebutton.disabled = true;
+
     if (this.value == 'smsstudent') {
-        document.getElementById('batchlist').removeAttribute('disabled');
+        // document.getElementById('batchlist').removeAttribute('disabled');
+        // document.getElementById('programlist').removeAttribute('disabled');
+        for (const element of batchprogram) {
+            element.removeAttribute('disabled');
+        }
+
         document
             .getElementById('batchcontainer')
             .classList.remove('bg-secondary');
-        document.getElementById('light').classList.remove('text-light');
+        // document.getElementById('light').classList.remove('text-light');
+        for (const element of lighton) {
+            element.classList.remove('text-light');
+        }
+        addbutton.disabled = false;
+        removebutton.disabled = false;
+        // for (const i of pbadd) {
+        //     i.disabled = false;
+        // }
     } else {
+        $('#programlist')[0].selectedIndex = 0;
+        $('#batchlist')[0].selectedIndex = 0;
+
         document.getElementById('batchcontainer').classList.add('bg-secondary');
-        document.getElementById('light').classList.add('text-light');
+        // document.getElementById('light').classList.add('text-light');
     }
 };
+
+//Add Program and Batch
+$('.addpb').click(function (event) {
+    event.preventDefault();
+    var d1 = document.querySelector('.pbbox');
+    var new_count = parseInt($('#total_count').val()) + 1;
+
+    d1.insertAdjacentHTML(
+        'beforebegin',
+        `
+    <div class="row" id="pbrow${new_count}">
+                                <div class="col-md-6">
+                                    <p>
+                                        <label for="programlist${new_count}" class="fs-6 fw-bold lighton" id="light">Choose Program #${new_count}</label>
+                                        <br />
+                                        <select class="batinput bplist" name="programlist${new_count}" id="programlist${new_count}">
+                                            <option selected="" disabled="">Select Program</option>
+                                            <option value="program1">Program 1</option>
+                                            <option value="program2">Program 2</option>
+                                            <option value="program3">Program 3</option>
+                                            <option value="program4">Program 4</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>
+                                        <label for="batchlist${new_count}" class="fs-6 fw-bold lighton" id="light">Choose Batch #${new_count}</label>
+                                        <br />
+                                        <select class="batinput bplist" name="batchlist${new_count}" id="batchlist${new_count}">
+                                            <option selected="" disabled="">Select Batch</option>
+                                            <option value="batch1">Batch 1</option>
+                                            <option value="batch2">Batch 2</option>
+                                            <option value="batch3">Batch 3</option>
+                                            <option value="batch4">Batch 4</option>
+                                        </select>
+                                    </p>
+                                </div>
+    `
+    );
+    $('#total_count').val(new_count);
+});
+
+//Remove Program and Batch
+$('.removepb').click(function (event) {
+    event.preventDefault();
+    var d1 = document.querySelector('.pbbox');
+    var new_count = parseInt($('#total_count').val()) + 1;
+
+    var last_count = $('#total_count').val();
+
+    if (last_count > 1) {
+        $('#pbrow' + last_count).remove();
+        $('#total_count').val(last_count - 1);
+    }
+});
+
 //Profile Image
 profileimg.onchange = evt => {
     const [file] = profileimg.files;

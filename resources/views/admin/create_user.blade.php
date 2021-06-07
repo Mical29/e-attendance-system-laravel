@@ -20,7 +20,6 @@
                                     <option value="smsadmin">Admin</option>
                                     <option value="smslecturer">Lecturer</option>
                                     <option value="smshr">HR</option>
-                                    <option value="smsparent">Parent</option>
                                     <option value="smsstudent">Student</option>
                                 </select>
                             </p>
@@ -31,20 +30,99 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3 bg-secondary bg-gradient" id="batchcontainer">
+                        <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3  bg-gradient" id="">
+
                             <p>
-                                <label for="batchlist" class="fs-5 fw-bold text-light" id="light">Choose Batch</label>
-                                <br />
-                                <select class="" name="batchlist" id="batchlist" disabled>
-                                    <option selected="" disabled="">Select Batch</option>
-                                    <option value="batch1">Batch 1</option>
-                                    <option value="batch2">Batch 2</option>
-                                    <option value="batch3">Batch 3</option>
-                                    <option value="batch4">Batch 4</option>
-                                </select>
+                                <label for="userpassword" class="fs-5 fw-bold">Create Password</label> <br />
+                                <input type="password" placeholder="**********" name="userpassword " class="rounded">
                             </p>
+                            <p>
+                                <label for="userpasswordconfirm" class="fs-5 fw-bold">Confirm Password</label> <br />
+                                <input type="password" placeholder="**********" name="userpasswordconfirm" class="rounded">
+                            </p>
+
                         </div>
                     </div>
+
+                    <div class="col-md-12 mt-3">
+                        <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3 bg-secondary bg-gradient" id="batchcontainer">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        <label for="programlist" class="fs-6 fw-bold text-light lighton" id="light">Choose Program #1</label>
+                                        <br />
+                                        <select class="batinput bplist" name="programlist" id="programlist" disabled>
+                                            <option selected="" disabled="">Select Program</option>
+                                            <option value="program1">Program 1</option>
+                                            <option value="program2">Program 2</option>
+                                            <option value="program3">Program 3</option>
+                                            <option value="program4">Program 4</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>
+                                        <label for="batchlist" class="fs-6 fw-bold text-light lighton" id="light">Choose Batch #1</label>
+                                        <br />
+                                        <select class="batinput bplist" name="batchlist" id="batchlist" disabled>
+                                            <option selected="" disabled="">Select Batch</option>
+                                            <option value="batch1">Batch 1</option>
+                                            <option value="batch2">Batch 2</option>
+                                            <option value="batch3">Batch 3</option>
+                                            <option value="batch4">Batch 4</option>
+                                        </select>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row pbbox">
+                                <div class="col-md-12">
+                                    <label for="pb" class="fs-6 fw-bold text-light lighton" id="light">Action</label>
+                                    <br />
+                                    <button class="addpb" disabled>Add new program</button>
+                                    <button class="removepb" disabled>Remove recent program</button>
+                                </div>
+                            </div>
+
+                            <input type="hidden" value="1" id="total_count">
+
+                            {{-- <div class="row">
+                                <div class="col-md-4">
+                                    <p>
+                                        <label for="programlist" class="fs-6 fw-bold text-light lighton" id="light">Choose Program</label>
+                                        <br />
+                                        <select class="batinput bplist" name="programlist" id="programlist" disabled>
+                                            <option selected="" disabled="">Select Program</option>
+                                            <option value="program1">Program 1</option>
+                                            <option value="program2">Program 2</option>
+                                            <option value="program3">Program 3</option>
+                                            <option value="program4">Program 4</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="col-md-4" id="newchq">
+                                    <p>
+                                        <label for="batchlist" class="fs-6 fw-bold text-light lighton" id="light">Choose Batch</label>
+                                        <br />
+                                        <select class="batinput bplist" name="batchlist" id="batchlist" disabled>
+                                            <option selected="" disabled="">Select Batch</option>
+                                            <option value="batch1">Batch 1</option>
+                                            <option value="batch2">Batch 2</option>
+                                            <option value="batch3">Batch 3</option>
+                                            <option value="batch4">Batch 4</option>
+                                        </select>
+                                    </p>
+                                </div>
+                                <div class="col-md-4 ">
+                                    <label for="pb" class="fs-6 fw-bold text-light lighton" id="light">Action</label>
+                                    <br />
+                                    <button class="addpb" disabled>Add new</button>
+                                    <button class="removepb" disabled>Remove this</button>
+                                </div>
+                            </div> --}}
+                        </div>
+                    </div>
+
 
                     <div class="col-md-12 mt-3">
                         <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3">

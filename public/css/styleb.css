@@ -88,6 +88,9 @@ button:hover {
     font-size: 17px;
     border: 1px solid #aaaaaa;
 }
+.batinput {
+    /* width: 100% !important; */
+}
 .userscreate input.form-control {
     width: 300px;
 }
