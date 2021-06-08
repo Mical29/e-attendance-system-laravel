@@ -38,7 +38,7 @@ class ClassController extends Controller
         request('programimg')->move($destinationPath,$fileName);
        
         $programs->save();
-        return redirect()->route('shared.program_index')->with('success','Program created successfully :)');
+        return redirect()->route('programs.index')->with('success','Program created successfully :)');
         
     }
 
