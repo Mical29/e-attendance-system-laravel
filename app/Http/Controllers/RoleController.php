@@ -11,7 +11,7 @@ class RoleController extends Controller
     //
     public function index(){
         $roles = Role::all();
-        $context = ['roles' => $roles]
+        $context = ['roles' => $roles];
         return view('admin.role_list',$context);
     }
 
