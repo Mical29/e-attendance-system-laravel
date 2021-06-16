@@ -120,3 +120,41 @@ button:hover {
 .toggle.ios .toggle-handle {
     border-radius: 20px;
 }
+
+/* for Roles Create */
+.rolescreate select,
+.rolescreate input:not([type="file"]):not([type="radio"]),
+.rolescreate textarea {
+    width: 300px;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid #aaaaaa;
+}
+.rolescreate input.form-control {
+    width: 300px;
+}
+.rolescreate input:focus-visible,
+.rolescreate textarea:focus-visible {
+    outline-color: #4086f0;
+}
+
+.custom-control.custom-switch {
+    column-count: 2;
+}
+
+/* Program Index */
+img.imgcol {
+    width: 200px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+}
+.allprogram input[type="search"]:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+.allprogram tr.odd,
+.allprogram tr.even {
+    border: 1px solid white !important;
+    background-color: transparent !important;
+}
