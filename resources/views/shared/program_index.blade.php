@@ -14,7 +14,7 @@
 <!-- for program index -->
 <div class="mb-4">
     <h3 class="float-md-start">Manage Programs</h3>
-    <a href="#" class="btn btn-primary btn-lg float-md-end" role="button" aria-pressed="true"><i class="fas fa-plus-circle"></i> Add New Program</a>
+    <a href="{{ route('programs.create')}}" class="btn btn-primary btn-lg float-md-end" role="button" aria-pressed="true"><i class="fas fa-plus-circle"></i> Add New Program</a>
     <section class="allprogram float-md-start">
         <!-- start container  -->
         <div class="overflow-hidden mt-3">
@@ -35,7 +35,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach($recentPrograms as $program)
                                     <tr>
+                                        <td class="tdimg"> <img src="/images/{{$program->program_image}}" class="imgcol"> </td>
+                                        <td class="tdtitle align-middle">{{$program->program_name }}</td>
+                                        <td class="tdcategory align-middle">Information Technology</td>
+                                        <td class="tdedit align-middle"><button type="button" class="btn btn-outline-primary">Edit</button></td>
+                                        <td class="tddelete align-middle"><button type="button" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button></td>
+                                    </tr>
+                                    @endforeach
+                                    {{-- <tr>
                                         <td class="tdimg"> <img src="http://momentousinstitute.org//assets/site/blog/classroomsetup.jpg" class="imgcol"> </td>
                                         <td class="tdtitle align-middle">HND in Computing</td>
                                         <td class="tdcategory align-middle">Information Technology</td>
@@ -57,7 +66,7 @@
                                         <td class="tdcategory align-middle">Information Technology</td>
                                         <td class="tdedit align-middle"><button type="button" class="btn btn-outline-primary">Edit</button></td>
                                         <td class="tddelete align-middle"><button type="button" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button></td>
-                                    </tr>
+                                    </tr> --}}
 
                                 </tbody>
                             </table>
@@ -240,9 +249,10 @@
                         <br />
 
                         <div class="custom">
-                            @foreach($programs as $program)
+                            {{-- @foreach($programs as $program)
                             <p> {{$program->program_name }} </p>
-                            @endforeach
+                            <img src="/images/{{$program->program_image}}">
+                            @endforeach --}}
 
                         </div>
                     </div>

@@ -110,9 +110,11 @@
 
 <div class="container-fluid">
     <div class="row mt-4">
+        {{-- @auth --}}
         <div class="col-md-3">
             @include('layouts.sidebar')
         </div>
+        {{-- @endauth --}}
         <div class="col-md-9">
             @yield('content')
         </div>
