@@ -20,7 +20,8 @@ class UserController extends Controller
     }
 
     public function create(){
-        return view('admin/create_user');
+        $roles = Role::pluck('name','name')->all();
+        return view('admin/create_user',compact('roles'));
     }
 
     public function store(Request $request){

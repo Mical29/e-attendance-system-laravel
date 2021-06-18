@@ -24,4 +24,11 @@
     @endforeach
 
 
+Edit Button 
+    - {{ route('users.edit',$user->id) }}
+
+Delete Button 
+    -  {{route(users.destroy), $user->id}}
+
+
 ----------------------------------------------------------------------------------------------------

@@ -15,8 +15,18 @@
         </div>
     @endif
 
-     @foreach($programs as $program)
-                 <p> {{$program->program_name }} </p>
+     @foreach($recentPrograms as $program)
+            <p> {{$program->program_name }} </p>
     @endforeach
+
+    @foreach($allPrograms as $program)
+            <p> {{$program->program_name }} </p>
+    @endforeach
+
+Edit Button 
+    - {{route(programs.edit), $program->id}}
+
+Delete Button
+    - {{route(programs.destroy), $program->id}}
 
 -------------------------------------------------------------------------------------------------

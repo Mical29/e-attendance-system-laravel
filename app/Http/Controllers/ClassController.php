@@ -10,12 +10,18 @@ class ClassController extends Controller
     //
 
     public function index(){
-        $programs = Program::all();
+        $recentPrograms = Program::orderBy("id")->take(3)->get();
+        $programs = Program::all(); // $allPrograms
         $context = [
             'programs'=> $programs
+            // 'allPrograms' => $allPrograms
         ];
         return view('shared.program_index',$context);
     }
+
+     public function show($id){
+        echo "Show Hello World";
+     }
 
     public function create(){
         return view('admin/create_class');
@@ -40,6 +46,20 @@ class ClassController extends Controller
         $programs->save();
         return redirect()->route('programs.index')->with('success','Program created successfully :)');
         
+    }
+
+    public function edit($id){
+        echo "Hello World";
+        // $program = Program::findOrFail($id);
+        // $context = [
+        //     'program' => $program
+        // ];
+        // return view('programs.edit',$context);
+
+    }
+
+    public function update(){
+
     }
 
     public function destory(){
