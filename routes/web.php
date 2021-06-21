@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ClassController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\BatchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::resource('batch',BatchController::class);
 Route::resource('users',UserController::class);
 Route::resource('programs',ClassController::class);
 Route::resource('course',CourseController::class);

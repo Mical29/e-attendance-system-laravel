@@ -32,3 +32,9 @@ Delete Button
 
 
 ----------------------------------------------------------------------------------------------------
+
+
+users/create  
+
+example form  
+<input name="roles[]"value={{$roles}} > ! That all
