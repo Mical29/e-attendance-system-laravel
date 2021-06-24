@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Hash;
 use App\Models\User;
+use App\Models\Program;
 use Spatie\Permission\Models\Role;
 use DB;
 
@@ -21,8 +22,10 @@ class UserController extends Controller
 
     public function create(){
         $roles = Role::all();
+        $programs = Program::all();
         $context=[
-            'roles'=>$roles
+            'roles'=>$roles,
+            'programs' => $programs
         ];
         return view('admin/create_user',$context);
     }
