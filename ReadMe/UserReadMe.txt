@@ -38,3 +38,8 @@ users/create
 
 example form  
 <input name="roles[]"value={{$roles}} > ! That all
+
+
+@foreach($roles as $role)
+    $role->name
+@endforeach
