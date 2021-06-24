@@ -11,10 +11,10 @@ class ClassController extends Controller
 
     public function index(){
         $recentPrograms = Program::orderBy("id")->take(3)->get();
-        $programs = Program::all(); // $allPrograms
+        $programs = Program::all(); 
         $context = [
-            'programs'=> $programs
-            // 'allPrograms' => $allPrograms
+            'programs'=> $programs,
+            'recentPrograms' => $recentPrograms
         ];
         return view('shared.program_index',$context);
     }
