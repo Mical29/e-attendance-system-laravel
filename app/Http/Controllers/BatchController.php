@@ -13,7 +13,7 @@ class BatchController extends Controller
     }
 
     public function create(){
-        return view('admin/batch_create');
+        return view('admin/create_batch');
     }
 
     public function store(){
