@@ -12,7 +12,7 @@
                 <div class="row gx-5">
                     <div class="col-md-6">
                         <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3">
-                            <p>
+                            {{-- <p>
                                 <label for="userrole" class="fs-5 fw-bold">Choose Role</label>
                                 <br />
                                 <select class="" name="userrole" id="userrole">
@@ -22,11 +22,39 @@
                                     <option value="smshr">HR</option>
                                     <option value="smsstudent">Student</option>
                                 </select>
+                            </p> --}}
+                            <p>
+                                <label for="userrole" class="fs-5 fw-bold">Choose Role</label>
+                                <br />
+                                <select class="" name="roles[]" id="userrole">
+                                    <option selected="" disabled="">Select Role</option>
+                                    @foreach($roles as $role)
+                                    <option value={{$role->name}}>{{$role->name}}</option>
+                                    @endforeach
+                                    {{-- @foreach($roles as $role)
+                                    <option value="">{{$role->name}}</option>
+                                    @endforeach --}}
+
+
+                                    {{-- <option value="smslecturer">Lecturer</option>
+                                    <option value="smshr">HR</option>
+                                    <option value="smsstudent">Student</option> --}}
+                                </select>
                             </p>
+
+
+
                             <p>
                                 <label for="joineddate" class="fs-5 fw-bold">Joined Date</label> <br />
                                 <input type="date" name="joineddate" id="joineddate">
                             </p>
+
+                            {{-- @foreach($permission as $value)
+                            <p>
+                                <input type="checkbox" name="permission[]" class="custom-control-input" id="{{$value -> name}}" value="{{$value -> id}}">
+                            <label class="custom-control-label" for="{{$value -> name}}">{{$value -> name}}</label>
+                            </p>
+                            @endforeach --}}
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -53,10 +81,9 @@
                                         <br />
                                         <select class="batinput bplist" name="programlist" id="programlist" disabled>
                                             <option selected="" disabled="">Select Program</option>
-                                            <option value="program1">Program 1</option>
-                                            <option value="program2">Program 2</option>
-                                            <option value="program3">Program 3</option>
-                                            <option value="program4">Program 4</option>
+                                            @foreach($programs as $program)
+                                            <option value={{$program->program_name}}>{{$program->program_name}}</option>
+                                            @endforeach
                                         </select>
                                     </p>
                                 </div>

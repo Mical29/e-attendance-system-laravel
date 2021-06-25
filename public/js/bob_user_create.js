@@ -20,7 +20,7 @@ document.getElementById('userrole').onchange = function () {
     const removebutton = document.querySelector('.removepb');
     removebutton.disabled = true;
 
-    if (this.value == 'smsstudent') {
+    if (this.value == 'Student') {
         // document.getElementById('batchlist').removeAttribute('disabled');
         // document.getElementById('programlist').removeAttribute('disabled');
         for (const element of batchprogram) {
