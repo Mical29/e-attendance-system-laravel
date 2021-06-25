@@ -11,11 +11,11 @@ use DB;
 class RoleController extends Controller
 {
     //
-    // public function index(){
-    //     // $roles = Role::all();
-    //     // $context = ['roles' => $roles];
-    //     // return view('admin.role_list',$context);
-    // }
+    public function index(){
+        $roles = Role::all();
+        $context = ['roles' => $roles];
+        return view('admin.role_list',$context);
+    }
 
     public function create(){
         $permission = Permission::get();
@@ -32,15 +32,26 @@ class RoleController extends Controller
         //  $role = new Role();
         //  $role->name = request('name');
         $role = Role::create(['name' => $request->input('name')]);
-        $role->syncPermissions($request->input('permission'));
-        
+        $role->syncPermissions($request->input('permission'));        
        
         // $permissions = request('permission');
         // $role->syncPermissions($permissions);
         // $role->save();
-        echo "Saved Successfully";
-        // return redirect()->route('roles.index')
-        //                 ->with('success','Role created successfully');
+        
+        return redirect()->route('roles.index')
+                        ->with('success','Role created successfully');
+    }
+
+    public function edit($id){
+
+    }
+
+    public function update($id){
+
+    }
+
+    public function destroy($id){
+        
     }
 
     
