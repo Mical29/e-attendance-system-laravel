@@ -49,7 +49,6 @@
     <script defer src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
 
-
 </head>
 
 <div id="app">
@@ -128,6 +127,10 @@
     <script>
         tinymce.init({
             selector: '#programRequirement'
+            , tinycomments_author: 'Author name'
+        , });
+        tinymce.init({
+            selector: '#batchRequirement'
             , tinycomments_author: 'Author name'
         , });
 

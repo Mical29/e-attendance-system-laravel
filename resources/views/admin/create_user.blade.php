@@ -190,6 +190,10 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3 profile_same_height">
+                                        <p id="isub">
+                                            <label for="instructorsubjects" class="fs-6 fw-bold text-primary">Courses</label><br />
+                                            <input type="text" name="instructorsubjects" id="instructorsubjects" placeholder="C#, JAVA, CS">
+                                        </p>
                                         <p>
                                             <label for="contactdetails" class="fs-6 fw-bold text-primary">Contact Details</label><br />
                                             <input type="email" name="profileemail" id="profileemail" placeholder="Email">

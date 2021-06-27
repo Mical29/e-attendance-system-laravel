@@ -120,6 +120,9 @@ button:hover {
 .toggle.ios .toggle-handle {
     border-radius: 20px;
 }
+.hideform {
+    display: none;
+}
 
 /* for Roles Create */
 .rolescreate select,
@@ -157,4 +160,15 @@ img.imgcol {
 .allprogram tr.even {
     border: 1px solid white !important;
     background-color: transparent !important;
+}
+
+/* Batch */
+.tdselection p input {
+    width: 50px !important;
+}
+img.modleprofile {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    object-fit: cover;
 }
