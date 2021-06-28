@@ -30,7 +30,8 @@ class ClassController extends Controller
     public function store(){
         $programs = new Program();
         $programs->program_name = request('programname');
-        // $programs->program_image = $request->input('programimg');
+        $programs->program_image = request('programimg');
+        $programs->program_category = request('programcategory');
         $programs->domestic_student = request('programfeeslocal');
         $programs->international_student = request('programfeesforeign');
         $programs->program_fees_message = request('programfeesmessage');
