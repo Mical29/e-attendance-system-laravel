@@ -1,5 +1,8 @@
 'use strict';
 //Choose Batch in Users/Create
+
+document.getElementById('isub').classList.add('hideform');
+
 document.getElementById('userrole').onchange = function () {
     // document.getElementById('batchlist').setAttribute('disabled', 'disabled');
     // document.getElementById('programlist').setAttribute('disabled', 'disabled');
@@ -48,55 +51,55 @@ document.getElementById('userrole').onchange = function () {
     }
 
     //Adding instructor subjects
-    document.getElementById('isub').classList.add('hideform');
     if (this.value == 'Instructor') {
         document.getElementById('isub').classList.remove('hideform');
     } else {
         document.getElementById('isub').classList.add('hideform');
     }
 };
-const btnAdd = document.querySelector('#btnAdd');
-const btnRemove = document.querySelector('#btnRemove');
-const sb = document.querySelector('#list');
-const name = document.querySelector('#name');
 
-btnAdd.onclick = e => {
-    e.preventDefault();
+// const btnAdd = document.querySelector('#btnAdd');
+// const btnRemove = document.querySelector('#btnRemove');
+// const sb = document.querySelector('#list');
+// const name = document.querySelector('#name');
 
-    // validate the option
-    if (name.value == '') {
-        alert('Please enter the name.');
-        return;
-    }
-    // create a new option
-    const option = new Option(name.value, name.value);
-    // add it to the list
-    sb.add(option, undefined);
+// btnAdd.onclick = eve => {
+//     eve.preventDefault();
 
-    // reset the value of the input
-    name.value = '';
-    name.focus();
-};
+//     // validate the option
+//     if (name.value == '') {
+//         alert('Please enter the name.');
+//         return;
+//     }
+//     // create a new option
+//     const option = new Option(name.value, name.value);
+//     // add it to the list
+//     sb.add(option, undefined);
 
-// remove selected option
-btnRemove.onclick = e => {
-    e.preventDefault();
+//     // reset the value of the input
+//     name.value = '';
+//     name.focus();
+// };
 
-    // save the selected option
-    let selected = [];
+// // remove selected option
+// btnRemove.onclick = e => {
+//     e.preventDefault();
 
-    for (let i = 0; i < sb.options.length; i++) {
-        selected[i] = sb.options[i].selected;
-    }
+//     // save the selected option
+//     let selected = [];
 
-    // remove all selected option
-    let index = sb.options.length;
-    while (index--) {
-        if (selected[index]) {
-            sb.remove(index);
-        }
-    }
-};
+//     for (let i = 0; i < sb.options.length; i++) {
+//         selected[i] = sb.options[i].selected;
+//     }
+
+//     // remove all selected option
+//     let index = sb.options.length;
+//     while (index--) {
+//         if (selected[index]) {
+//             sb.remove(index);
+//         }
+//     }
+// };
 
 //Add Program and Batch
 $('.addpb').click(function (event) {
