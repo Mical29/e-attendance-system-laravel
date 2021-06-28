@@ -28,9 +28,7 @@ class CreateUsersTable extends Migration
             $table->string('postal_code');
             $table->string('address_detail');
 
-           
-            $table->string('postal_code');
-            $table->string('address_detail');
+        
 
             $table->string('facebook')->default('None');
             $table->string('linkedin')->default('None');;
