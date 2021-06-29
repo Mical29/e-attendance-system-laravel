@@ -62,7 +62,7 @@
 
                             <p>
                                 <label for="userpassword" class="fs-5 fw-bold">Create Password</label> <br />
-                                <input type="password" placeholder="**********" name="userpassword " class="rounded">
+                                <input type="password" placeholder="**********" name="userpassword" class="rounded">
                             </p>
                             <p>
                                 <label for="userpasswordconfirm" class="fs-5 fw-bold">Confirm Password</label> <br />
@@ -163,10 +163,10 @@
                                             <input accept="image/*" type='file' id="profileimg" name="profileimg" class="form-control mt-3" />
                                         </p>
                                         <p>
-                                            <input placeholder="First Name" name="profilefirstname " class="rounded">
+                                            <input placeholder="First Name" name="profilefirstname" class="rounded">
                                         </p>
                                         <p>
-                                            <input placeholder="Last Name" name="profilelastname " class="rounded">
+                                            <input placeholder="Last Name" name="profilelastname" class="rounded">
                                         </p>
                                         <p>
                                             <label for="usergender" class="text-muted">Gender</label> <br />
@@ -266,7 +266,7 @@
                                             <input accept="image/*" type='file' id="guardianfirstimg" name="guardianfirstimg" class="form-control mt-3" />
                                         </p>
                                         <p>
-                                            <input placeholder="Guardian #1 Name" name="guardianname " class="rounded">
+                                            <input placeholder="Guardian #1 Name" name="guardianname" class="rounded">
                                         </p>
                                         <p>
                                             <label for="relationship" class="text-muted">Relationship with user</label> <br />
@@ -303,7 +303,7 @@
                                             <input accept="image/*" type='file' id="guardiansecimg" name="secguardiansecimg" class="form-control mt-3" />
                                         </p>
                                         <p>
-                                            <input placeholder="Guardian #2 Name" name="secguardianname " class="rounded">
+                                            <input placeholder="Guardian #2 Name" name="secguardianname" class="rounded">
                                         </p>
                                         <p class="targetrs">
                                             <label for="secrelationship" class="text-muted">Relationship with user</label> <br />

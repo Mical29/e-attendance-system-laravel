@@ -1,6 +1,16 @@
 @extends('layouts.app')
 @section('content')
 
+@if ($message = Session::get('error'))
+<div class="alert alert-danger alert-dismissible fade show" id="bsalert" role="alert">
+    <strong>{{ $message }}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+@endif
+
 <!-- for role create -->
 <div class="mb-4">
     <h3>Create Roles</h3>

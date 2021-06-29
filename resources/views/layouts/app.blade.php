@@ -135,7 +135,5 @@
         , });
 
     </script>
-
-    </script>
     </body>
 </html>

@@ -2,7 +2,7 @@
 console.log('Hi');
 setTimeout(function () {
     $('#bsalert').remove();
-}, 3000);
+}, 10000);
 
 $(document).ready(function () {
     $('.dbtable').DataTable();
