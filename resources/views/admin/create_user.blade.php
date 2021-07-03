@@ -263,10 +263,10 @@
                                         <p>
                                             <label for="guardiandetails" class="fs-6 fw-bold text-primary">Guardian #1 Contact Details</label><br />
                                             <img id="guardianfirstpreview" src="https://www.celebritycontactdetails.com/wp-content/uploads/2018/09/Actress-Deepika-Padukone-300x295.jpg" alt="guardian image" /> <br />
-                                            <input accept="image/*" type='file' id="guardianfirstimg" name="guardianfirstimg" class="form-control mt-3" />
+                                            <input accept="image/*" type='file' id="guardianfirstimg" name="guardianfirstimg[]" class="form-control mt-3" />
                                         </p>
                                         <p>
-                                            <input placeholder="Guardian #1 Name" name="guardianname" class="rounded">
+                                            <input placeholder="Guardian #1 Name" name="guardianname[]" class="rounded">
                                         </p>
                                         <p>
                                             <label for="relationship" class="text-muted">Relationship with user</label> <br />
@@ -285,13 +285,13 @@
                                             <input style="display:none;" type="text" name="relationship" id="otherAnswer" placeholder="Uncle/ Aunt/ Grandmother etc..." />
                                         </p>
                                         <p>
-                                            <input type="email" name="guardianemail" id="guardianemail" placeholder="Guardian #1 Email">
+                                            <input type="email" name="guardianemail[]" id="guardianemail" placeholder="Guardian #1 Email">
                                         </p>
                                         <p>
-                                            <input type="number" name="guardiaphone" id="guardiaphone" placeholder="Guardian #1 Phone">
+                                            <input type="number" name="guardiaphone[]" id="guardiaphone" placeholder="Guardian #1 Phone">
                                         </p>
                                         <p>
-                                            <textarea id="guardianaddress" name="guardianaddress" rows="4" placeholder="Guardian #1 Address" class="rounded"></textarea>
+                                            <textarea id="guardianaddress" name="guardianaddress[]" rows="4" placeholder="Guardian #1 Address" class="rounded"></textarea>
                                         </p>
                                     </div>
                                 </div>
@@ -300,10 +300,10 @@
                                         <p>
                                             <label for="guardiandetails" class="fs-6 fw-bold text-primary">Guardian #2 Contact Details</label><br />
                                             <img id="guardiansecpreview" src="https://filmfare.wwmindia.com/content/2020/oct/ranveersingh11602233648.jpg" alt="second guardian image" /> <br />
-                                            <input accept="image/*" type='file' id="guardiansecimg" name="secguardiansecimg" class="form-control mt-3" />
+                                            <input accept="image/*" type='file' id="guardiansecimg" name="secguardiansecimg[]" class="form-control mt-3" />
                                         </p>
                                         <p>
-                                            <input placeholder="Guardian #2 Name" name="secguardianname" class="rounded">
+                                            <input placeholder="Guardian #2 Name" name="secguardianname[]" class="rounded">
                                         </p>
                                         <p class="targetrs">
                                             <label for="secrelationship" class="text-muted">Relationship with user</label> <br />
@@ -323,13 +323,13 @@
 
                                         </p>
                                         <p>
-                                            <input type="email" name="secguardianemail" id="secguardianemail" placeholder="Guardian #2 Email">
+                                            <input type="email" name="secguardianemail[]" id="secguardianemail" placeholder="Guardian #2 Email">
                                         </p>
                                         <p>
-                                            <input type="number" name="secguardiaphone" id="secguardiaphone" placeholder="Guardian #2 Phone">
+                                            <input type="number" name="secguardiaphone[]" id="secguardiaphone" placeholder="Guardian #2 Phone">
                                         </p>
                                         <p>
-                                            <textarea id="secguardianaddress" name="secguardianaddress" rows="4" placeholder="Guardian #2 Address" class="rounded"></textarea>
+                                            <textarea id="secguardianaddress" name="secguardianaddress[]" rows="4" placeholder="Guardian #2 Address" class="rounded"></textarea>
                                         </p>
                                     </div>
                                 </div>

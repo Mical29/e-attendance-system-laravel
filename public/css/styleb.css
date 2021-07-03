@@ -184,3 +184,6 @@ img.modleprofile {
     color: var(--blue);
     text-decoration: none;
 }
+.sidenav .active {
+    color: var(--blue);
+}
