@@ -50,6 +50,10 @@ Head - Body are under layouts/app
                             <input type="date" name="classstartsdate" id="classstartsdate" class="rounded">
                         </p>
                         <p>
+                            <label for="classendsdate" class="text-muted">End Date</label> <br />
+                            <input type="date" name="classendsdate" id="classendsdate" class="rounded">
+                        </p>
+                        <p>
                             <label for="timefrom" class="text-muted">From</label> <br />
                             <input type="time" name="timefrom" id="timefrom" class="rounded">
                         </p>

@@ -117,6 +117,4 @@
 </section>
 </div>
 
-
-<script type="text/javascript" src="{{ URL::asset('js/bob_course_create.js') }}"> </script>
 @endsection
