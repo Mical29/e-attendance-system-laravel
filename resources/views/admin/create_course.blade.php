@@ -17,6 +17,16 @@
                                 <label for="name" class="fs-5 fw-bold">Add Course</label> <br />
                                 <input type="text" name="name" placeholder="Computer Systems...">
                             </p>
+                            <p>
+                                <label for="relatedProgram" class="fs-5 fw-bold" id="">Choose Related Program</label>
+                                <br />
+                                <select class="" name="relatedProgram" id="relatedProgram">
+                                    <option selected="" disabled="">Select Program</option>
+                                    {{-- @foreach($programs as $program)
+                                    <option value={{$program->program_id}}>{{$program->program_id}}</option>
+                                    @endforeach --}}
+                                </select>
+                            </p>
                             <div style="overflow:auto;" class="">
                                 <div style="">
                                     <button type="reset" id="reset">Reset</button>
@@ -117,4 +127,6 @@
 </section>
 </div>
 
+
+<script type="text/javascript" src="{{ URL::asset('js/bob_course_create.js') }}"> </script>
 @endsection
