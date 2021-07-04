@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Hash;
 use App\Models\User;
-use App\Models\Program;
 use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+use App\Models\Program;
 use DB;
 
 use Illuminate\Support\Arr;
@@ -22,7 +23,7 @@ class UserController extends Controller
 
     public function create(){
         $roles = Role::all();
-        $programs = Program::all();
+        $programs = Program::all();// Not Program it will be course
         $context=[
             'roles'=>$roles,
             'programs' => $programs
@@ -30,18 +31,21 @@ class UserController extends Controller
         return view('admin/create_user',$context);
     }
 
-    public function store(Request $request){
-        $this->validate($request, [
-            'name'=> 'required',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|same:confirm-password',
-            'roles' => 'required'
-        ]);
+    public function store(){
+        // $this->validate($request, [
+        //     'name '=> 'required',
+        //     'email' => 'required|email|unique:users,email',
+        //     'password ' => 'required|same:userpasswordconfirm',
+        //     'roles' => 'required'
+        // ]);
+        $user = new User();
+        $user->name = request('profilefirstname');
+        $user->email = request('profileemail');
+        $user->password = Hash::make(request('userpassword'));
 
-        $input = $request->all();
-        $input['password'] = Hash::make($input['password']);        
-        $user = User::create($input);
-        $user->assignRole($request->input('roles'));
+        $user->assignRole(request('roles'));// Assign Roles
+        
+        echo("Successfully Saved :)");
     }
 
     public function destroy(){
