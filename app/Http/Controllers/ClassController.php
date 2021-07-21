@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Program;
+use App\Models\ProgramCategory;
 
 class ClassController extends Controller
 {
@@ -24,7 +25,11 @@ class ClassController extends Controller
      }
 
     public function create(){
-        return view('admin/create_class');
+        $programCategories = ProgramCategory::all();
+        $context = [
+            'categories' => $programCategories
+        ];
+        return view('admin/create_class',$context);
     }
 
     public function store(){
@@ -51,16 +56,25 @@ class ClassController extends Controller
 
     public function edit($id){
         echo "Hello World";
-        // $program = Program::findOrFail($id);
-        // $context = [
-        //     'program' => $program
-        // ];
-        // return view('programs.edit',$context);
+        $program = Program::findOrFail($id);
+        $context = [
+            'program' => $program
+        ];
+        return view('admin/update_program',$context);
 
     }
 
-    public function update(){
-
+    public function update($id){
+        $program = Program::find(request('id'));
+        $program->program_name = request('programname');
+        $program->program_image = request('programimg');
+        $program->program_category = request('programcategory');
+        $program->domestic_student = request('programfeeslocal');
+        $program->international_student = request('programfeesforeign');
+        $program->program_fees_message = request('programfeesmessage');
+        $program->eligibility_and_requirements = request('programRequirement');     
+        $program->save();     
+        echo("successfully updated");
     }
 
     public function destory(){

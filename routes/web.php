@@ -6,6 +6,7 @@ use App\Http\Controllers\ClassController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\BatchController;
+use App\Http\Controllers\ProgramCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ use App\Http\Controllers\BatchController;
 
 
 Route::get('/', function () {
-    return view('index');
+    return view('dashboard');
 });
 
 Route::resource('batch',BatchController::class);
@@ -28,6 +29,7 @@ Route::resource('users',UserController::class);
 Route::resource('programs',ClassController::class);
 Route::resource('course',CourseController::class);
 Route::resource('roles',RoleController::class);
+Route::resource('programcategory',ProgramCategoryController::class);
 
 Auth::routes();
 

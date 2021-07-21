@@ -17,6 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('first_name');
             $table->string('last_name');
+            $table->string('profile_img');
             $table->string('gender');
             $table->string('date_of_birth');
 
@@ -36,15 +37,16 @@ class CreateUsersTable extends Migration
             $table->string('skype')->default('None');;
             $table->string('personal_website')->default('None');
 
-            $table->string('gurdian_img');
-            $table->string('gurdian_name');
-            $table->string('relationship');
-            $table->string('gurdian_email');
-            $table->string('gurdian_phone');
-            $table->string('gurdian_address');
+            $table->json('gurdian_img');
+            $table->json('gurdian_name');
+            $table->json('relationship');
+            $table->json('gurdian_email');
+            $table->json('gurdian_phone');
+            $table->json('gurdian_address');
 
             $table->string('current_medical_treatment');
             $table->string('doctor_name');
+            $table->string('doctor_phone');
             
             $table->string('nature_of_treatment');
             $table->string('is_allergic');

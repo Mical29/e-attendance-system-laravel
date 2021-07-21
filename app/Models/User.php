@@ -23,6 +23,7 @@ class User extends Authenticatable
         'password',
     ];
 
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -40,5 +41,13 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'gurdian_img' => 'array',
+        'gurdian_name' => 'array',
+        'relationship' => 'array',
+        'gurdian_email' => 'array',
+        'gurdian_phone' => 'array',
+        'gurdian_address' => 'array',
+
+
     ];
 }
