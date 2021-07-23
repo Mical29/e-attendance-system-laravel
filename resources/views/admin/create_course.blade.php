@@ -1,6 +1,15 @@
 @extends('layouts.app')
 @section('content')
 
+@if ($message = Session::get('success'))
+<div class="alert alert-success alert-dismissible fade show" id="bsalert" role="alert">
+    <strong>{{ $message }}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+@endif
 
 <div class="mb-4">
     <h3>Create Courses</h3>
@@ -18,13 +27,24 @@
                                 <input type="text" name="name" placeholder="Computer Systems...">
                             </p>
                             <p>
+                                <label for="relatedInstructor" class="fs-5 fw-bold">
+                                    Choose Related Instructor
+                                </label>
+                                <br />
+                                <select class="" name="relatedInstructor" id="relatedInstructor">
+                                    <option selected="" disabled="">Select Instructor</option>
+                                    <option value="1">Tr. Daw Yin Yin</option>
+                                    <option value="2">Tr. Daw Nu Nu</option>
+                                </select>
+                            </p>
+                            <p>
                                 <label for="relatedProgram" class="fs-5 fw-bold" id="">Choose Related Program</label>
                                 <br />
                                 <select class="" name="relatedProgram" id="relatedProgram">
                                     <option selected="" disabled="">Select Program</option>
-                                    {{-- @foreach($programs as $program)
-                                    <option value={{$program->program_id}}>{{$program->program_id}}</option>
-                                    @endforeach --}}
+                                    @foreach($programs as $program)
+                                    <option value={{$program -> id}}>{{$program->program_name}}</option>
+                                    @endforeach
                                 </select>
                             </p>
                             <div style="overflow:auto;" class="">
@@ -56,43 +76,42 @@
                                 <div class="chapterbox p-3 border border-gray rounded pl-3 pr-3 mb-3 bg-gradient">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <p>
-                                                <label for="chapter1" class="fs-6 fw-bold">Chapter #1</label>
-                                                <br />
-                                                <input type="text" id="chapter1" name="chapter1" placeholder="Enter Chapter #1 Name...">
-                                            </p>
-                                            <div class="filebox">
+                                            <div id="cfid1">
                                                 <p>
-                                                    <label for="file1name" class="fw-bold">File #1</label><br />
-                                                    <input type="text" id="file1name" name="file1name" placeholder="Enter File #1 Name..."><br />
-                                                    <input type="file" name="file1upload" class="form-control mt-3">
-                                                </p>
-                                            </div>
-                                            <div class="row fileaction">
-                                                <div class="col-md-12">
-                                                    <label for="filebox" class=" fw-bold" id="">File Action</label>
+                                                    <label for="cfname1" class="fs-6 fw-bold" id="cfname1">Add New Chapter/File Name</label>
                                                     <br />
-                                                    <button class="addfile bg-dark">Add new file</button>
-                                                    <button class="removefile bg-dark">Remove recent file</button>
+                                                    <input type="text" id="cfname1" name="cfname1" placeholder="Enter Chapter/File Name...">
+                                                </p>
+                                                <p>
+                                                    <select class="" name="cfoption" id="cfoption">
+                                                        <option selected="" disabled="">Select Type</option>
+                                                        <option value="Chapter">Chapter</option>
+                                                        <option value="File">File</option>
+                                                    </select>
+                                                </p>
+
+                                                <div class="filebox">
+                                                    <p class="fileborder">
+                                                        <label for="addfile" class="fw-bold">Add File</label><br />
+                                                        <input type="file" name="addfile" class="form-control">
+                                                    </p>
+                                                </div>
+                                                <div class="row fileaction">
+                                                    <div class="col-md-12">
+                                                        <label for="filebox" class=" fw-bold" id="">File/Chapter Action</label>
+                                                        <br />
+                                                        <button class="addaction bg-dark">Add new</button>
+                                                        <button class="removeaction bg-dark">Remove recent</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="hidden" value="1" class="total_count_file">
-                            <div class="row chapteraction">
-                                <div class="col-md-12" style="">
-                                    <div style="float:right;" class="">
-                                        <label for="pb" class="fs-6 fw-bold" id="">Chapter Action</label>
-                                        <br />
-                                        <button class="addchapter">Add new chapter</button>
-                                        <button class="removechapter">Remove recent chapter</button>
+                                        <input type="hidden" value="1" class="total_count_file">
                                     </div>
                                 </div>
                             </div>
 
-                            <input type="hidden" value="1" id="total_count_chapter">
+
                         </div>
                         <div style="overflow:auto;" class="">
                             <div style="float:right;">
