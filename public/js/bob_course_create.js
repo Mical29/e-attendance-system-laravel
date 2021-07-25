@@ -6,18 +6,18 @@ setTimeout(function () {
 
 // Show File
 
-// let fb = document.getElementsByClassName(`filebox`);
-// document.getElementById('cfoption').onchange = function () {
-//     if (this.value == 'File') {
-//         for (var i = 0; i < fb.length; i++) {
-//             fb[i].classList.remove('hidefilebox');
-//         }
-//     } else {
-//         for (var i = 0; i < fb.length; i++) {
-//             fb[i].classList.add('hidefilebox');
-//         }
-//     }
-// };
+let fb = document.getElementsByClassName(`filebox`);
+document.getElementById('cfoption').onchange = function () {
+    if (this.value == 'File') {
+        for (var i = 0; i < fb.length; i++) {
+            fb[i].classList.remove('hidefilebox');
+        }
+    } else {
+        for (var i = 0; i < fb.length; i++) {
+            fb[i].classList.add('hidefilebox');
+        }
+    }
+};
 
 //Add File
 $('.addaction').click(function (event) {
@@ -26,7 +26,7 @@ $('.addaction').click(function (event) {
     var new_count_file = parseInt($('.total_count_file').val()) + 1;
 
     d2.insertAdjacentHTML(
-        'beforeend',
+        'afterend',
         `
         <div id="cfid${new_count_file}">
         <p>

@@ -271,18 +271,18 @@
                                         <p>
                                             <label for="relationship" class="text-muted">Relationship with user</label> <br />
 
-                                            <input type="radio" class="targetfirstrs" name="relationship" checked="checked" value="parent" />
+                                            <input type="radio" class="targetfirstrs" name="relationship[]" checked="checked" value="parent" />
                                             <label for="rsparent" class="pr-2">Parent</label>
 
-                                            <input type="radio" class="targetfirstrs" name="relationship" value="sibling" />
+                                            <input type="radio" class="targetfirstrs" name="relationship[]" value="sibling" />
                                             <label for="rsparent" class="pr-2">Sibling</label>
 
-                                            <input type="radio" class="targetfirstrs" name="relationship" value="spouse" />
+                                            <input type="radio" class="targetfirstrs" name="relationship[]" value="spouse" />
                                             <label for="rsspouse" class="pr-2">Spouse</label>
 
-                                            <input type="radio" class="targetfirstrs" name="relationship" value="other" />
+                                            <input type="radio" class="targetfirstrs" name="relationship[]" value="other" />
                                             <label for="rsother" class="pr-2">Other</label>
-                                            <input style="display:none;" type="text" name="relationship" id="otherAnswer" placeholder="Uncle/ Aunt/ Grandmother etc..." />
+                                            <input style="display:none;" type="text" name="relationship[]" id="otherAnswer" placeholder="Uncle/ Aunt/ Grandmother etc..." />
                                         </p>
                                         <p>
                                             <input type="email" name="guardianemail[]" id="guardianemail" placeholder="Guardian #1 Email">
@@ -300,36 +300,36 @@
                                         <p>
                                             <label for="guardiandetails" class="fs-6 fw-bold text-primary">Guardian #2 Contact Details</label><br />
                                             <img id="guardiansecpreview" src="https://filmfare.wwmindia.com/content/2020/oct/ranveersingh11602233648.jpg" alt="second guardian image" /> <br />
-                                            <input accept="image/*" type='file' id="guardiansecimg" name="secguardiansecimg[]" class="form-control mt-3" />
+                                            <input accept="image/*" type='file' id="guardiansecimg" name="guardianfirstimg[]" class="form-control mt-3" />
                                         </p>
                                         <p>
-                                            <input placeholder="Guardian #2 Name" name="secguardianname[]" class="rounded">
+                                            <input placeholder="Guardian #2 Name" name="guardianname[]" class="rounded">
                                         </p>
                                         <p class="targetrs">
                                             <label for="secrelationship" class="text-muted">Relationship with user</label> <br />
 
-                                            <input type="radio" class="targetsecrs" name="secrelationship" checked="checked" value="secparent" />
+                                            <input type="radio" class="targetsecrs" name="secrelationship[]" checked="checked" value="secparent" />
                                             <label for="secrsparent" class="pr-2">Parent</label>
 
-                                            <input type="radio" class="targetsecrs" name="secrelationship" value="secsibling" />
+                                            <input type="radio" class="targetsecrs" name="secrelationship[]" value="secsibling" />
                                             <label for="secrsparent" class="pr-2">Sibling</label>
 
-                                            <input type="radio" class="targetsecrs" name="secrelationship" value="secspouse" />
+                                            <input type="radio" class="targetsecrs" name="secrelationship[]" value="secspouse" />
                                             <label for="secrsspouse" class="pr-2">Spouse</label>
 
-                                            <input type="radio" class="targetsecrs" name="secrelationship" value="secother" />
+                                            <input type="radio" class="targetsecrs" name="secrelationship[]" value="secother" />
                                             <label for="secrsother" class="pr-2">Other</label>
-                                            <input style="display:none;" type="text" name="secrelationship" id="secOtherAnswer" placeholder="Uncle/ Aunt/ Grandmother etc..." />
+                                            <input style="display:none;" type="text" name="secrelationship[]" id="secOtherAnswer" placeholder="Uncle/ Aunt/ Grandmother etc..." />
 
                                         </p>
                                         <p>
-                                            <input type="email" name="secguardianemail[]" id="secguardianemail" placeholder="Guardian #2 Email">
+                                            <input type="email" name="guardianemail[]" id="secguardianemail" placeholder="Guardian #2 Email">
                                         </p>
                                         <p>
-                                            <input type="number" name="secguardiaphone[]" id="secguardiaphone" placeholder="Guardian #2 Phone">
+                                            <input type="number" name="guardiaphone[]" id="secguardiaphone" placeholder="Guardian #2 Phone">
                                         </p>
                                         <p>
-                                            <textarea id="secguardianaddress" name="secguardianaddress[]" rows="4" placeholder="Guardian #2 Address" class="rounded"></textarea>
+                                            <textarea id="secguardianaddress" name="guardianaddress[]" rows="4" placeholder="Guardian #2 Address" class="rounded"></textarea>
                                         </p>
                                     </div>
                                 </div>
