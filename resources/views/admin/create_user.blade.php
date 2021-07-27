@@ -7,7 +7,7 @@
     <section class="userscreate">
         <form id="userRegForm" action={{ route('users.store') }} method=POST enctype="multipart/form-data">
             @csrf
-            <!-- start container  -->
+            <!-- start container -->
             <div class="overflow-hidden mt-3">
                 <div class="row gx-5">
                     <div class="col-md-6">
@@ -26,7 +26,7 @@
                             <p>
                                 <label for="userrole" class="fs-5 fw-bold">Choose Role</label>
                                 <br />
-                                <select class="" name="roles[]" id="userrole">
+                                <select class="" name="roles" id="userrole">
                                     <option selected="" disabled="">Select Role</option>
                                     @foreach($roles as $role)
                                     <option value={{$role->name}}>{{$role->name}}</option>
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3  bg-gradient" id="">
+                        <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3 bg-gradient" id="">
 
                             <p>
                                 <label for="userpassword" class="fs-5 fw-bold">Create Password</label> <br />
@@ -71,8 +71,9 @@
 
                         </div>
                     </div>
+17:24
 
-                    <div class="col-md-12 mt-3">
+<div class="col-md-12 mt-3">
                         <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3 bg-secondary bg-gradient" id="batchcontainer">
                             <div class="row">
                                 <div class="col-md-6">
@@ -112,8 +113,9 @@
                             </div>
 
                             <input type="hidden" value="1" id="total_count">
+17:24
 
-                            {{-- <div class="row">
+{{-- <div class="row">
                                 <div class="col-md-4">
                                     <p>
                                         <label for="programlist" class="fs-6 fw-bold text-light lighton" id="light">Choose Program</label>
@@ -149,9 +151,9 @@
                             </div> --}}
                         </div>
                     </div>
+17:24
 
-
-                    <div class="col-md-12 mt-3">
+<div class="col-md-12 mt-3">
                         <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3">
                             <label for="personalinfo" class="fs-5 fw-bold">Personal Info</label>
                             <div class="row">
@@ -185,8 +187,9 @@
                                         </p> --}}
 
 
-
-                                    </div>
+widgetwhats.com/app/uploads/2019/11/free-profile-photo-whatsapp-4.png
+17:24
+</div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3 profile_same_height">
@@ -226,8 +229,9 @@
                                         <p>
                                             <textarea id="profileaddress" name="profileaddress" rows="4" placeholder="Address Detail" class="rounded"></textarea>
                                         </p>
+17:24
 
-                                    </div>
+</div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="p-3 border border-gray rounded pl-3 pr-3 mb-3 profile_same_height">
@@ -263,35 +267,38 @@
                                         <p>
                                             <label for="guardiandetails" class="fs-6 fw-bold text-primary">Guardian #1 Contact Details</label><br />
                                             <img id="guardianfirstpreview" src="https://www.celebritycontactdetails.com/wp-content/uploads/2018/09/Actress-Deepika-Padukone-300x295.jpg" alt="guardian image" /> <br />
-                                            <input accept="image/*" type='file' id="guardianfirstimg" name="guardianfirstimg[]" class="form-control mt-3" />
+                                            <input accept="image/*" type='file' id="guardianfirstimg" name="guardianfirstimg" class="form-control mt-3" />
                                         </p>
                                         <p>
-                                            <input placeholder="Guardian #1 Name" name="guardianname[]" class="rounded">
+                                            <input placeholder="Guardian #1 Name" name="gurdian_name[]" class="rounded">
                                         </p>
                                         <p>
                                             <label for="relationship" class="text-muted">Relationship with user</label> <br />
 
-                                            <input type="radio" class="targetfirstrs" name="relationship[]" checked="checked" value="parent" />
+                                            <input type="radio" class="targetfirstrs" name="relationship" checked="checked" value="parent" />
                                             <label for="rsparent" class="pr-2">Parent</label>
 
-                                            <input type="radio" class="targetfirstrs" name="relationship[]" value="sibling" />
+                                            <input type="radio" class="targetfirstrs" name="relationship" value="sibling" />
                                             <label for="rsparent" class="pr-2">Sibling</label>
 
-                                            <input type="radio" class="targetfirstrs" name="relationship[]" value="spouse" />
+                                            <input type="radio" class="targetfirstrs" name="relationship" value="spouse" />
                                             <label for="rsspouse" class="pr-2">Spouse</label>
 
-                                            <input type="radio" class="targetfirstrs" name="relationship[]" value="other" />
+
+celebritycontactdetails.com/wp-content/uploads/2018/09/Actress-Deepika-Padukone-300x295.jpg
+17:24
+<input type="radio" class="targetfirstrs" name="relationship" value="other" />
                                             <label for="rsother" class="pr-2">Other</label>
-                                            <input style="display:none;" type="text" name="relationship[]" id="otherAnswer" placeholder="Uncle/ Aunt/ Grandmother etc..." />
+                                            <input style="display:none;" type="text" name="relationship" id="otherAnswer" placeholder="Uncle/ Aunt/ Grandmother etc..." />
                                         </p>
                                         <p>
-                                            <input type="email" name="guardianemail[]" id="guardianemail" placeholder="Guardian #1 Email">
+                                            <input type="email" name="gurdian_email[]" id="guardianemail" placeholder="Guardian #1 Email">
                                         </p>
                                         <p>
-                                            <input type="number" name="guardiaphone[]" id="guardiaphone" placeholder="Guardian #1 Phone">
+                                            <input type="number" name="gurdian_phone[]" id="guardiaphone" placeholder="Guardian #1 Phone">
                                         </p>
                                         <p>
-                                            <textarea id="guardianaddress" name="guardianaddress[]" rows="4" placeholder="Guardian #1 Address" class="rounded"></textarea>
+                                            <textarea id="guardianaddress" name="gurdian_address[]" rows="4" placeholder="Guardian #1 Address" class="rounded"></textarea>
                                         </p>
                                     </div>
                                 </div>
@@ -300,36 +307,39 @@
                                         <p>
                                             <label for="guardiandetails" class="fs-6 fw-bold text-primary">Guardian #2 Contact Details</label><br />
                                             <img id="guardiansecpreview" src="https://filmfare.wwmindia.com/content/2020/oct/ranveersingh11602233648.jpg" alt="second guardian image" /> <br />
-                                            <input accept="image/*" type='file' id="guardiansecimg" name="guardianfirstimg[]" class="form-control mt-3" />
+                                            <input accept="image/*" type='file' id="guardiansecimg" name="second_gurdian_img" class="form-control mt-3" />
                                         </p>
                                         <p>
-                                            <input placeholder="Guardian #2 Name" name="guardianname[]" class="rounded">
+                                            <input placeholder="Guardian #2 Name" name="gurdian_name[]" class="rounded">
                                         </p>
                                         <p class="targetrs">
                                             <label for="secrelationship" class="text-muted">Relationship with user</label> <br />
 
-                                            <input type="radio" class="targetsecrs" name="secrelationship[]" checked="checked" value="secparent" />
+                                            <input type="radio" class="targetsecrs" name="secrelationship" checked="checked" value="secparent" />
                                             <label for="secrsparent" class="pr-2">Parent</label>
 
-                                            <input type="radio" class="targetsecrs" name="secrelationship[]" value="secsibling" />
+                                            <input type="radio" class="targetsecrs" name="secrelationship" value="secsibling" />
                                             <label for="secrsparent" class="pr-2">Sibling</label>
 
-                                            <input type="radio" class="targetsecrs" name="secrelationship[]" value="secspouse" />
+                                            <input type="radio" class="targetsecrs" name="secrelationship" value="secspouse" />
                                             <label for="secrsspouse" class="pr-2">Spouse</label>
 
-                                            <input type="radio" class="targetsecrs" name="secrelationship[]" value="secother" />
+                                            <input type="radio" class="targetsecrs" name="secrelationship" value="secother" />
                                             <label for="secrsother" class="pr-2">Other</label>
-                                            <input style="display:none;" type="text" name="secrelationship[]" id="secOtherAnswer" placeholder="Uncle/ Aunt/ Grandmother etc..." />
+                                            <input style="display:none;" type="text" name="secrelationship" id="secOtherAnswer" placeholder="Uncle/ Aunt/ Grandmother etc..." />
 
+
+filmfare.wwmindia.com/content/2020/oct/ranveersingh11602233648.jpg
+17:24
+</p>
+                                        <p>
+                                            <input type="email" name="gurdian_email[]" id="secguardianemail" placeholder="Guardian #2 Email">
                                         </p>
                                         <p>
-                                            <input type="email" name="guardianemail[]" id="secguardianemail" placeholder="Guardian #2 Email">
+                                            <input type="number" name="gurdian_phone[]" id="secguardiaphone" placeholder="Guardian #2 Phone">
                                         </p>
                                         <p>
-                                            <input type="number" name="guardiaphone[]" id="secguardiaphone" placeholder="Guardian #2 Phone">
-                                        </p>
-                                        <p>
-                                            <textarea id="secguardianaddress" name="guardianaddress[]" rows="4" placeholder="Guardian #2 Address" class="rounded"></textarea>
+                                            <textarea id="secguardianaddress" name="gurdian_address[]" rows="4" placeholder="Guardian #2 Address" class="rounded"></textarea>
                                         </p>
                                     </div>
                                 </div>
@@ -375,7 +385,9 @@
                                         </p>
                                         <p>
                                             <label for="allergicyes" class="fs-6 text-muted fw-bold">If yes, please list all allergies:</label> <br />
-                                            <textarea id="natureoftreatment" name="natureoftreatment" rows="4" placeholder="List of Allgeries" class="rounded"></textarea>
+17:24
+
+<textarea id="natureoftreatment" name="natureoftreatment" rows="4" placeholder="List of Allgeries" class="rounded"></textarea>
                                         </p>
                                         <p>
                                             <label for="anaphylactic" class="fs-6 text-muted fw-bold">If yes, have any of these allergies cause an anaphylactic reaction?</label> <br />
@@ -409,8 +421,9 @@
                                         </p>
 
                                         <hr />
+17:24
 
-                                        <p>
+<p>
                                             <label for="healthinsurance" class="fs-6 text-primary fw-bolder">Health Insurance Contact Details</label> <br />
                                             <input type="text" name="healthinsurancename" placeholder="Health Insurance Name" />
                                         </p>
@@ -418,7 +431,7 @@
                                             <input type="number" name="healthinsurancephone" placeholder="Health Insurance Phone Number" />
                                         </p>
                                         <p>
-                                            <textarea id="physicalconditionyes" name="physicalconditionyes" rows="4" placeholder="Health Insurance Address" class="rounded"></textarea>
+                                            <textarea id="physicalconditionyes" name="healthinsuranceaddress" rows="4" placeholder="Health Insurance Address" class="rounded"></textarea>
                                         </p>
                                         <hr />
                                         <p>
