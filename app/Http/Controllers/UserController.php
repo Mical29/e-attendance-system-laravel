@@ -39,13 +39,14 @@ class UserController extends Controller
         //     'roles' => 'required'
         // ]);
         $user = new User();
-        $user->name = request('profilefirstname');
+        $user->first_name = request('profilefirstname');
+        $user->last_name = request('profilefirstname');
         $user->email = request('profileemail');
         $user->password = Hash::make(request('userpassword'));
         $user->gender = request('usergender');
         $user->date_of_birth = request('dob');       
 
-        $user->courses = request('');// Need To Check
+        $user->courses = request('instructorsubjects');// Need To Check
         $user->phone = request('profilephone');
         $user->region = request('userregion');
         $user->postal_code = request('postcode');
@@ -56,22 +57,24 @@ class UserController extends Controller
         $user->personal_website = request('website');
 
         $destinationImgPath = public_path().'/images';
+        $user->profile_img = request('profileimg')->getClientOriginalName();
+        $profileImgName = request('profileimg')->getClientOriginalName();
+        request('profileimg')->move($destinationImgPath,$profileImgName);
 
-        $user->gurdian_img = request('guardianfirstimg')->getClientOriginalName();
-        $user->profile_img = request('progileimg')->getClientOriginalName();
-        
-        $imgName = request('guardianfirstimg')->getClientOriginalName();
-        $profileImgName = request('progileimg')->getClientOriginalName();
+        $user->first_gurdian_img = request('guardianfirstimg')->getClientOriginalName();
+        $firstGurdianImgName = request('guardianfirstimg')->getClientOriginalName();
+        request('guardianfirstimg')->move($destinationImgPath,$firstGurdianImgName);
 
-        request('guardianfirstimg')->move($destinationImgPath,$imgName);
-        request('progileimg')->move($destinationImgPath,$profileImgName);
-      
+        $user->second_gurdian_img = request('second_gurdian_img')->getClientOriginalName();
+        $secondGurdianImgName = request('second_gurdian_img')->getClientOriginalName();
+        request('second_gurdian_img')->move($destinationImgPath,$secondGurdianImgName);
 
-        $user->gurdian_name = request('guardianname');
-        $user->relationship = request('relationship');
-        $user->gurdian_email = request('guardianemail');
-        $user->gurdian_phone = request('guardiaphone');
-        $user->gurdian_address = request('guardianaddress');
+        $user->gurdian_name = request('gurdian_name');
+        $user->first_gurdian_relationship = request('relationship');
+        $user->second_gurdian_relationship = request('secrelationship');
+        $user->gurdian_email = request('gurdian_email');
+        $user->gurdian_phone = request('gurdian_phone');
+        $user->_gurdian_address = request('gurdian_address');
 
         $user->current_medical_treatment = request('medicaltreatment');
         $user->doctor_name = request('doctorname');
@@ -92,12 +95,13 @@ class UserController extends Controller
         $fileName = request('medicalrecordfile')->getClientOriginalName();
 
         request('medicalrecordfile')->move($destinationPath,$fileName);
+        
         $user->save();        
 
         $user->assignRole(request('roles'));// Assign Roles
         
         echo("Successfully Saved :)");
-        return redirect()->route('users.index')->with('success','User created successfully :)');
+        // return redirect()->route('users.index')->with('success','User created successfully :)');
     }
 
     public function destroy(){

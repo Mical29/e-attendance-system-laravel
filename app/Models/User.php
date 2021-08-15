@@ -18,9 +18,9 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'first_name',
+        'last_name',
+             
     ];
 
 
@@ -40,14 +40,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
-        'gurdian_img' => 'array',
-        'gurdian_name' => 'array',
-        'relationship' => 'array',
+        'email_verified_at' => 'datetime',        
+        'gurdian_name' => 'array',      
         'gurdian_email' => 'array',
         'gurdian_phone' => 'array',
-        'gurdian_address' => 'array',
-
-
+        '_gurdian_address' => 'array',
     ];
 }
