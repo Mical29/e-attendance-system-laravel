@@ -111,7 +111,6 @@
     <div class="row mt-4">
         {{-- @auth --}}
         <div class="col-md-3">
-            {{-- @include('layouts.sidebar') --}}
             @include('layouts.sidebarone')
         </div>
         {{-- @endauth --}}
