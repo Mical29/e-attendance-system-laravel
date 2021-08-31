@@ -1,6 +1,6 @@
-<div class="text-light main_bg">
+<div class="text-light main_bg mb-4">
 <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar"> 
-                        <ul class="nav flex-column text-white w-100 mt-3">
+                        <ul class="nav flex-md-column text-white w-100 mt-3 mb-3 justify-content-center">
                             <a href="#" style="text-decoration:none;"><li href="#" class="nav-link"><span class="mx-2"><i class="fas fa-home"></i> Home</span></li></a>
                             <a href="#" style="text-decoration:none;"><li href="#" class="nav-link"><span class="mx-2">Edit Details</span></li></a>
                             <a href="#" style="text-decoration:none;"><li href="#" class="nav-link"><span class="mx-2">Profile Gallery</span></li></a>
