@@ -16,10 +16,12 @@ class UserController extends Controller
 {
     //
 
-    public function index(Request $request){
-        $data = User::orderBy('id','DESC');
-        return view('admin.user_index',compact('data'));
+    public function index(){
+        $users = User::all();
+        $context = ['users' => $users];
+        return view('admin.user_index',$context);
     }
+
 
     public function create(){
         $roles = Role::all();
@@ -29,6 +31,17 @@ class UserController extends Controller
             'programs' => $programs
         ];
         return view('admin/create_user',$context);
+    }
+
+    public function edit($id){
+        $user = User::find($id);
+        // $permission = Permission::get();
+        // $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.role_id",$id)
+        //     ->pluck('role_has_permissions.permission_id','role_has_permissions.permission_id')
+        //     ->all();
+    
+        return view('admin.edit_user',compact('user'));
+
     }
 
     public function store(){
