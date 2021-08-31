@@ -35,12 +35,14 @@ class UserController extends Controller
 
     public function edit($id){
         $user = User::find($id);
-        // $permission = Permission::get();
-        // $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.role_id",$id)
-        //     ->pluck('role_has_permissions.permission_id','role_has_permissions.permission_id')
-        //     ->all();
+        $permission = Permission::get();
+        $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.role_id",$id)
+            ->pluck('role_has_permissions.permission_id','role_has_permissions.permission_id')
+            ->all();
         $context=[
-            'user' => $user
+            'user' => $user,
+            'permission' => $permission,
+            'roles' => $rolePermissions
         ];
         return view('admin/edit_user',$context);
 
