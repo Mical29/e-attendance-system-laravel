@@ -14,34 +14,20 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                @foreach($users as $user)
                                     <tr>
-                                        <td class="tdrole align-middle">1</td>
-                                        <td class="tddescription align-middle">Ye Linn Aung</td>
-                                        <td class="tdpermissions align-middle">davidgautam.1234@gmail.com</td>
-                                        <td class="tdpermissions align-middle">09-123456789</td>
-                                        <td class="tdpermissions align-middle">profile.png</td>
-                                        <td class="tdedit align-middle"><button type="button" class="btn btn-outline-primary">Edit</button></td>
-                                        <td class="tddelete align-middle"><button type="button" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button></td>
-                                    </tr> 
-                                    <tr>
-                                        <td class="tdrole align-middle">2</td>
-                                        <td class="tddescription align-middle">Ye Linn Aung</td>
-                                        <td class="tdpermissions align-middle">davidgautam.1234@gmail.com</td>
-                                        <td class="tdpermissions align-middle">09-123456789</td>
-                                        <td class="tdpermissions align-middle">profile.png</td>
-                                        <td class="tdedit align-middle"><button type="button" class="btn btn-outline-primary">Edit</button></td>
-                                        <td class="tddelete align-middle"><button type="button" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button></td>
-                                    </tr>  
-                                    <tr>
-                                        <td class="tdrole align-middle">3</td>
-                                        <td class="tddescription align-middle">Ye Linn Aung</td>
-                                        <td class="tdpermissions align-middle">davidgautam.1234@gmail.com</td>
-                                        <td class="tdpermissions align-middle">09-123456789</td>
-                                        <td class="tdpermissions align-middle">profile.png</td>
-                                        <td class="tdedit align-middle"><button type="button" class="btn btn-outline-primary">Edit</button></td>
+                                        <td class="tdtitle align-middle">{{$user->id }}</td>
+                                        <td class="tdtitle align-middle">{{$user->first_name }}</td>
+                                        <td class="tdtitle align-middle">{{$user->email }}</td>
+                                        <td class="tdtitle align-middle">{{$user->phone }}</td>
+                                        <td class="tdtitle align-middle"><img src='/images/{{$user->profile_img}}' width="200" height="50"></td>
+                                        <td class="tdedit align-middle">
+                                            <a href="{{ route('users.edit',$user->id) }}" class="btn btn-outline-primary">Edit</a>
+                                        </td>
                                         <td class="tddelete align-middle"><button type="button" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button></td>
                                     </tr>
-                                    <tr>
+                                    @endforeach
+                                    <!-- <tr>
                                         <td class="tdrole align-middle">4</td>
                                         <td class="tddescription align-middle">Ye Linn Aung</td>
                                         <td class="tdpermissions align-middle">davidgautam.1234@gmail.com</td>
@@ -49,7 +35,7 @@
                                         <td class="tdpermissions align-middle">profile.png</td>
                                         <td class="tdedit align-middle"><button type="button" class="btn btn-outline-primary">Edit</button></td>
                                         <td class="tddelete align-middle"><button type="button" class="btn btn-outline-danger"><i class="far fa-trash-alt"></i></button></td>
-                                    </tr>   
+                                    </tr>    -->
                                 </tbody>
                             </table>
 
